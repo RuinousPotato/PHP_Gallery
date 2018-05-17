@@ -9,11 +9,25 @@
             </h1>
 
             <?php
-            $sql="SELECT * FROM users";
-            $result= $database->query($sql);
-            $user_found = mysqli_fetch_array($result);
 
-            echo $user_found['username'];
+            // $result_set = User::find_all_users();
+            // while($row = mysqli_fetch_array($result_set)){
+            //   echo $row['username'] . "<br>";
+            // }
+
+            // $user_found = User::find_user_by_id(1);
+            //
+            // $user = User::instantiation($user_found);
+            //
+            // echo $user->username;
+
+
+            $users = User::find_all_users();
+
+            foreach ($users as $user) {
+              echo $user->id . "<br>";
+            }
+
              ?>
 
             <ol class="breadcrumb">
