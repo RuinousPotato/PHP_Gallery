@@ -21,16 +21,6 @@ class User
 
     return !empty($the_result_array) ? array_shift($the_result_array) : false;
 
-  //   if(!empty($the_result_array)){
-  //
-  //     $first_item = array_shift($the_result_array);
-  //
-  //     return first_item;
-  //   } else {
-  //     return false;
-  //   }
-  //
-    return $found_user;
   }
 
   public static function find_this_query($sql){
