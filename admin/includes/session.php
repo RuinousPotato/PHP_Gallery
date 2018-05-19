@@ -3,13 +3,13 @@
 /**
  *
  */
-class ClassName
+class Session
 {
 
   private $signed_in = false;
   public  $user_id;
 
-  function __construct(argument)
+  function __construct()
   {
     session_start();
     $this->check_the_login();
@@ -17,7 +17,7 @@ class ClassName
 
   public function is_signed_in(){
 
-    return $rhis->signed_in;
+    return $this->signed_in;
 
   }
 
