@@ -30,7 +30,7 @@ class User
   //     return false;
   //   }
   //
-  //   return $found_user;
+    return $found_user;
   }
 
   public static function find_this_query($sql){
@@ -43,6 +43,15 @@ class User
     }
 
     return $the_object_array;
+  }
+
+  public static function verify_user(){
+    global database;
+
+    $username = $database->escape_string($username);
+    $password = $database->escape_string($password);
+
+
   }
 
   public static function instantiation ($the_record){
