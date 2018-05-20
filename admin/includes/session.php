@@ -14,7 +14,7 @@ class Session
   {
     session_start();
     $this->check_the_login();
-    $rhis->check_message();
+    $this->check_message();
 
   }
 
