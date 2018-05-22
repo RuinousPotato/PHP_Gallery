@@ -11,18 +11,18 @@
 
             <?php
 
-            // $user = new User();
-            //
-            // $user->username = "Example_username";
-            // $user->password = "Example_password";
-            // $user->first_name = "Ferrus";
-            // $user->last_name = "Manus";
-            //
-            // $user->create();
+            $user = new User();
 
-            $user = User::find_user_by_id(6);
+            $user->username = "Horus";
+            $user->password = "dick";
+            $user->first_name = "Horus";
+            $user->last_name = "Lupercal";
 
-            $user->delete();
+            $user->save();
+
+            // $user = User::find_user_by_id(5);
+            // $user->username = "Snguinus";
+            // $user->save();
 
 
              ?>
