@@ -11,14 +11,20 @@
 
             <?php
 
-            $user = new User();
+            // $user = new User();
+            //
+            // $user->username = "Example_username";
+            // $user->password = "Example_password";
+            // $user->first_name = "Ferrus";
+            // $user->last_name = "Manus";
+            //
+            // $user->create();
 
-            $user->username = "Example_username";
-            $user->password = "Example_password";
-            $user->first_name = "Ferrus";
-            $user->last_name = "Manus";
+            $user = User::find_user_by_id(4);
+            $user->last_name = "Metal";
 
-            $user->create();
+            $user->update();
+
 
              ?>
 
