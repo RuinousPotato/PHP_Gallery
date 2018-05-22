@@ -1,3 +1,4 @@
+
 <div class="container-fluid">
 
     <!-- Page Heading -->
@@ -10,27 +11,14 @@
 
             <?php
 
-            // $result_set = User::find_all_users();
-            // while($row = mysqli_fetch_array($result_set)){
-            //   echo $row['username'] . "<br>";
-            // }
+            $user = new User();
 
-            // $user_found = User::find_user_by_id(1);
-            //
-            // $user = User::instantiation($user_found);
-            //
-            // echo $user->username;
+            $user->username = "Example_username";
+            $user->password = "Example_password";
+            $user->first_name = "Ferrus";
+            $user->last_name = "Manus";
 
-
-            // $users = User::find_all_users();
-            //
-            // foreach ($users as $user) {
-            //   echo $user->id . "<br>";
-            // }
-
-              $found_user = User::find_user_by_id(1);
-
-              echo $found_user->username;
+            $user->create();
 
              ?>
 
