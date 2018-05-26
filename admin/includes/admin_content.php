@@ -20,7 +20,7 @@
             //
             // $user->save();
 
-            $user = User::find_user_by_id(6);
+            $user = User::find_user_by_id(8);
             $user->username = "Konrad";
             $user->password = "bolo";
             $user->first_name = "Konrad";
