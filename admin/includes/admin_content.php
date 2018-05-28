@@ -20,12 +20,16 @@
             //
             // $user->save();
 
-            $user = User::find_user_by_id(8);
-            $user->username = "Konrad";
-            $user->password = "bolo";
-            $user->first_name = "Konrad";
-            $user->last_name = "Curze";
-            $user->update();
+            $users = User::find_all();
+
+            foreach ($users as $user) {
+              echo $user->username;
+            }
+            // $user->username = "Konrad";
+            // $user->password = "bolo";
+            // $user->first_name = "Konrad";
+            // $user->last_name = "Curze";
+            // $user->update();
 
 
              ?>
