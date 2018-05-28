@@ -11,20 +11,20 @@
 
             <?php
 
-            // $user = new User();
-            //
-            // $user->username = "Horus";
-            // $user->password = "dick";
-            // $user->first_name = "Horus";
-            // $user->last_name = "Lupercal";
-            //
-            // $user->save();
+            $user = new User();
 
-            $users = User::find_all();
+            $user->username = "Leman";
+            $user->password = "wolf";
+            $user->first_name = "Leman";
+            $user->last_name = "Russ";
 
-            foreach ($users as $user) {
-              echo $user->username;
-            }
+            $user->save();
+
+            // $users = User::find_all();
+            //
+            // foreach ($users as $user) {
+            //   echo $user->username;
+            // }
             // $user->username = "Konrad";
             // $user->password = "bolo";
             // $user->first_name = "Konrad";
