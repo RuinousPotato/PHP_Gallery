@@ -15,10 +15,10 @@ class Photo extends Db_object
   public $type;
   public $size;
 
-  function __construct(argument)
-  {
-    // code...
-  }
+  // function __construct(argument)
+  // {
+  //   // code...
+  // }
 }
 
 

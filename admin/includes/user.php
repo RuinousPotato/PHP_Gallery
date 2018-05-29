@@ -29,19 +29,6 @@ class User extends Db_object
     return !empty($the_result_array) ? array_shift($the_result_array) : false;
   }
 
-  protected function properties(){
-
-    $properties = array();
-
-    foreach (self::$db_table_fields as $db_field) {
-      //to check if listed object property exists
-      if (property_exists($this, $db_field)) {
-        $properties[$db_field] = $this->$db_field;
-      }
-    }
-    return $properties;
-  }
-
 } //End of class User
 
  ?>

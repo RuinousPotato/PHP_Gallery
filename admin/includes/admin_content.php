@@ -11,26 +11,35 @@
 
             <?php
 
-            $user = new User();
-
-            $user->username = "Leman";
-            $user->password = "wolf";
-            $user->first_name = "Leman";
-            $user->last_name = "Russ";
-
-            $user->save();
-
-            // $users = User::find_all();
+            // $user = new User();
             //
-            // foreach ($users as $user) {
-            //   echo $user->username;
+            // $user->username = "Leman";
+            // $user->password = "wolf";
+            // $user->first_name = "Leman";
+            // $user->last_name = "Russ";
+            //
+            // $user->save();
+
+            // $photos = Photo::find_all();
+            //
+            // foreach ($photos as $photo) {
+            //   echo $photo->title;
             // }
+
             // $user->username = "Konrad";
             // $user->password = "bolo";
             // $user->first_name = "Konrad";
             // $user->last_name = "Curze";
             // $user->update();
 
+            $photo = new Photo();
+
+            $photo->title = "Leman";
+            $photo->description = "Russ";
+            $photo->size = 20;
+
+
+            $photo->save();
 
              ?>
 
