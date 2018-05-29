@@ -55,7 +55,7 @@ class Db_object {
 
     $properties = array();
 
-    foreach (self::$db_table_fields as $db_field) {
+    foreach (static::$db_table_fields as $db_field) {
       //to check if listed object property exists
       if (property_exists($this, $db_field)) {
         $properties[$db_field] = $this->$db_field;
@@ -91,7 +91,7 @@ class Db_object {
 
     $properties = $this->clean_properties();
 
-    $sql = "INSERT INTO " . self::$db_table . "(" . implode(",", array_keys($properties)) . ")";
+    $sql = "INSERT INTO " . static::$db_table . "(" . implode(",", array_keys($properties)) . ")";
     $sql .= "VALUES ('" . implode("','", array_values($properties)) . "')";
 
     if($database->query($sql)) {
@@ -119,7 +119,7 @@ class Db_object {
 
     }
 
-    $sql = "UPDATE " . self::$db_table . " SET ";
+    $sql = "UPDATE " . static::$db_table . " SET ";
     $sql .= implode(", ", $properties_pairs);
     $sql .= " WHERE id="  . $database->escape_string($this->id);
 
@@ -132,7 +132,7 @@ class Db_object {
   public function delete(){
     global $database;
 
-    $sql = "DELETE FROM " . self::$db_table . " WHERE id = " . $database->escape_string($this->id);
+    $sql = "DELETE FROM " . static::$db_table . " WHERE id = " . $database->escape_string($this->id);
     $sql .= " LIMIT 1";
 
     $database->query($sql);
