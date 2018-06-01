@@ -32,14 +32,18 @@
             // $user->last_name = "Curze";
             // $user->update();
 
-            $photo = new Photo();
+            // $photo = new Photo();
+            //
+            // $photo->title = "Leman";
+            // $photo->description = "Russ";
+            // $photo->size = 20;
+            //
+            //
+            // $photo->save();
 
-            $photo->title = "Leman";
-            $photo->description = "Russ";
-            $photo->size = 20;
-
-
-            $photo->save();
+            echo INCLUDES_PATH;
+            echo "<br>";
+            echo __DIR__;
 
              ?>
 
