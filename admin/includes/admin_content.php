@@ -11,6 +11,14 @@
 
             <?php
 
+            $user = User::find_by_id(3);
+
+            echo $user->username;
+
+            $photo = Photo::find_by_id(4);
+
+            echo $photo->title;
+
             // $user = new User();
             //
             // $user->username = "Leman";
@@ -41,9 +49,9 @@
             //
             // $photo->save();
 
-            echo INCLUDES_PATH;
-            echo "<br>";
-            echo __DIR__;
+            // echo INCLUDES_PATH;
+            // echo "<br>";
+            // echo __DIR__;
 
              ?>
 
