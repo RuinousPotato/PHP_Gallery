@@ -51,19 +51,19 @@
                     <form class="" action="edit_photo.php" method="post">
                       <div class="col-lg-8">
                         <div class="form-group">
-                          <input type="text" name="title" class="form-control" value="">
+                          <input type="text" name="title" class="form-control" value="<?php echo $photo->title; ?>">
                         </div>
                         <div class="form-group">
                           <label for="caption">Caption</label>
-                          <input type="text" name="caption" class="form-control" value="<?php echo $photo->title; ?>">
+                          <input type="text" name="caption" class="form-control" value="<?php echo $photo->caption; ?>">
                         </div>
                         <div class="form-group">
                           <label for="caption">Alternate Text</label>
-                          <input type="text" name="alternate_text" class="form-control" value="">
+                          <input type="text" name="alternate_text" class="form-control" value="<?php echo $photo->alternate_text; ?>">
                         </div>
                         <div class="form-group">
                           <label for="caption">Description</label>
-                          <textarea class="form-control" name="description" rows="10" cols="30"></textarea>
+                          <textarea class="form-control" name="description" rows="10" cols="30" ><?php echo $photo->description; ?></textarea>
                         </div>
                       </div>
                       <div class="col-md-4" >
